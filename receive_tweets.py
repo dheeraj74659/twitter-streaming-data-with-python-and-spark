@@ -1,15 +1,15 @@
 import tweepy
 from tweepy.auth import OAuthHandler
-# from tweepy import Stream
-from tweepy.streaming import Stream
+from tweepy import Stream
+from tweepy.streaming import StreamListener
 import socket
 import json
 
 # request to get credentials at http://apps.twitter.com
-consumer_key = 'aOxHGXjzqKTP9k8DKJRf0ZRDD'
-consumer_secret = 'MvzAgwQUNPB5IRf6TcH6CQHPHqgNI3SpL360GmJMHPL8YF1fJo'
-access_token    = '1743623826116878336-q49lvWDyL9xwXz5aEqRDtOaq1bccul'
-access_secret   = 'UsIfxX7dfGXb57398YniXxkHCeobFviqCxvkTFPAvhRnd'
+consumer_key = ''
+consumer_secret = ''
+access_token    = ''
+access_secret   = ''
 
 # we create this class that inherits from the StreamListener in tweepy StreamListener.
 class TweetsListener(StreamListener):
@@ -40,7 +40,6 @@ def send_tweets(c_socket):
     twitter_stream.filter(track=['football'])
 
 if __name__ == "__main__":
-    
     # initiate a socket object.
     new_skt = socket.socket()
     host = "127.0.0.1"
